@@ -1,6 +1,9 @@
 <cfset leksemaModel = new Recnik.mv.model.leksema()>
 <cfset vrsteReciModel = new Recnik.mv.model.vrsteReci()>
-<cfset AkcentiModel = new Recnik.mv.model.akcenti()>
+<cfset akcentiModel = new Recnik.mv.model.akcenti()>
+<cfset vidoviModel = new Recnik.mv.model.glagolskiVidovi()>
+<cfset vrsteModel = new Recnik.mv.model.glagolskeVrste()>
+<cfset morfGlagoliModel = new Recnik.mv.model.morfGlagoli()>
 
 <cfparam name="url.q" default="">
 <cfparam name="form.leksema" default="">
@@ -13,6 +16,10 @@
     <!-----Dodavanje nove lekseme ili promena podataka postojeće---->
     <cfif form.action eq "mngleks">
         <cfset url.q = leksemaModel.sacuvaj()>
+    </cfif>
+
+    <cfif form.action eq "mng_morf_glagoli">
+        <cfset morfGlagoliModel.sacuvaj()>
     </cfif>
 
     <!------Za slučaj da nije definisan pk, onda prikazujemo listu reči------>
@@ -33,7 +40,17 @@
         <cfmodule template="#application.view#\leksema.cfm" 
         leksema = "#leksema#" 
         vrsteReci = "#vrsteReciModel.dohvatiVrsteReci()#"
-        akcenti = "#AkcentiModel.dohvatiAkcente()#">
+        akcenti = "#akcentiModel.dohvatiAkcente()#">
+
+        <!----U zavisnosti od vrste reči prikazujemo značenja, primere i izraze---->
+        <cfswitch expression="#leksema.vrsta_reci_id#">
+            <cfcase value="5">
+                <cfmodule template="#application.view#\morfGlagoli.cfm" 
+                vidovi = "#vidoviModel.dohvatiGlagolskeVidove()#"
+                vrste ="#vrsteModel.dohvatiGlagolskeVrste()#"
+                morfGlagoli ="#morfGlagoliModel.dohvatiMorfoloskeDetalje()#">
+            </cfcase>
+        </cfswitch>
     </cfif>
 
 </cfoutput>

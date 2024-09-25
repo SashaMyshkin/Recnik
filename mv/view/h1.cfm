@@ -3,7 +3,7 @@
         <div class="row justify-content-between">
             
             <div class="col-md-2">
-                <span style="font-size:1.2rem">#attributes.naslov#</span>
+                <span style="font-size:1.2rem;font-weight:bold">#attributes.naslov#</span>
             </div>
             
         </div>
