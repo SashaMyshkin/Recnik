@@ -7,7 +7,7 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="icon" href="#application.root#/logo.jpeg" type="image/png">
+            <link rel="icon" href="#application.rootURL#/logo.jpeg" type="image/png">
             <title>#txtWelcome#</title>
             <style>
                 body {
@@ -102,11 +102,11 @@
         </head>
         <body>
             <div class="login-container">
-                <img src="#application.root#/logo.jpeg" style="width:55px;"> 
+                <img src="#application.rootURL#/logo.jpeg" style="width:55px;"> 
                 <h2>#txtAdministration#</h2>
 
                 <cfif attributes.text neq ""><h3 style="color:red">#attributes.text#</h3></cfif>
-                <form class="login-form" action="#application.root#" method="POST">
+                <form class="login-form" action="#application.rootURL#" method="POST">
                     <div class="form-group">
                         <label for="username">#txtUsername#:</label>
                         <input type="text" id="j_username" name="j_username" placeholder="#txtEnterUsername#" required maxlength="30">

@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="##">
-                <img src="#application.root#/logo.jpeg" alt="Avatar Logo" style="width:45px;" class="rounded-pill star"> 
+                <img src="#application.rootURL#/logo.jpeg" alt="Avatar Logo" style="width:45px;" class="rounded-pill star"> 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="##boxMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -41,10 +41,10 @@
                             Речник
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#application.root#pretraga/">Претрага</a></li>
+                          <li><a class="dropdown-item" href="#application.rootURL#pretraga/">Претрага</a></li>
                           <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#application.root#lekseme/mng/">Унос - измена</a></li>
-                          <!---------li><a class="dropdown-item disabled" href="#application.root#audicija/uzi-krug/" >Odabir kandidata za uži krug</a></!---------li>
+                          <li><a class="dropdown-item" href="#application.rootURL#lekseme/mng/">Унос - измена</a></li>
+                          <!---------li><a class="dropdown-item disabled" href="#application.rootURL#audicija/uzi-krug/" >Odabir kandidata za uži krug</a></!---------li>
                           <li><a class="dropdown-item disabled" href="" >Odredi satnicu</a></li>
                           <li><a class="dropdown-item disabled" href="" >Odluka o prijemu u teatar</a></li>
                           <li><hr class="dropdown-divider"></li>
@@ -52,14 +52,14 @@
                           <li><a class="dropdown-item disabled" href="" >Kreiraj satnicu </a></li>
                           <li><a class="dropdown-item disabled" href="" >Biranje budućih članova </a></li>
                           <li><hr class="dropdown-divider"></li>
-                          <li--><a class="dropdown-item disabled" href="#application.root#audicija/mejlovi/" >Slanje mejlova</a></li--------->
+                          <li--><a class="dropdown-item disabled" href="#application.rootURL#audicija/mejlovi/" >Slanje mejlova</a></li--------->
                         </ul>
                     </li>
                     
                 </ul>
                 <ul class="navbar-nav text-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#application["root"]#logout.cfm"> #txtLogout# </a>
+                        <a class="nav-link" href="#application["rootURL"]#logout.cfm"> #txtLogout# </a>
                     </li>
                 </ul>
             </div>

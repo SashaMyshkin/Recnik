@@ -83,31 +83,9 @@ component {
         return q_leks_leksema;
     }
 
-    public query function dohvatiAkcente() {
+    
 
-        q_fon_akcenti = queryExecute(
-            sql = "SELECT id, akcenat FROM fon_akcenti",
-            options = {
-                datasource = application.datasource
-            }
-        );
-        
 
-        return q_fon_akcenti;
-    }
-
-    public query function dohvatiVrsteReci() {
-        
-        q_vrste_reci = queryExecute(
-            sql = "SELECT id, vrsta FROM vrste_reci",
-            options = {
-                datasource = application.datasource
-            }
-        );
-        
-
-        return q_vrste_reci;
-    }
 
     public number function save() {
         
