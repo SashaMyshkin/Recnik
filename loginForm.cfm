@@ -1,4 +1,3 @@
-<cfinclude template="txt.cfm">
 <cfparam name="attributes.text" default="">
 
 <cfoutput>
@@ -8,7 +7,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="icon" href="#application.rootURL#/logo.jpeg" type="image/png">
-            <title>#txtWelcome#</title>
+            <title>Добро дошли</title>
             <style>
                 body {
                     margin: 0;
@@ -108,15 +107,15 @@
                 <cfif attributes.text neq ""><h3 style="color:red">#attributes.text#</h3></cfif>
                 <form class="login-form" action="#application.rootURL#" method="POST">
                     <div class="form-group">
-                        <label for="username">#txtUsername#:</label>
-                        <input type="text" id="j_username" name="j_username" placeholder="#txtEnterUsername#" required maxlength="30">
+                        <label for="username">Корисничко име:</label>
+                        <input type="text" id="j_username" name="j_username" placeholder="Унесите корисничко име" required maxlength="30">
                     </div>
                     <div class="form-group">
-                        <label for="password">#txtPassword#:</label>
-                        <input type="password" id="j_password" name="j_password" placeholder="#txtEnterPassword#" required maxlength="30">
+                        <label for="password">Лозинка:</label>
+                        <input type="password" id="j_password" name="j_password" placeholder="Унесите лозинку" required maxlength="30">
                     </div>
                     <div class="form-group">
-                        <button type="submit">#txtLogin#</button>
+                        <button type="submit">Улогуј се</button>
                     </div>
                 </form>
             </div>
