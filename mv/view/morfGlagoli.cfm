@@ -39,5 +39,6 @@
                 </div>	
             </fieldset>
         </form>
+        <hr>
     </div>
 </cfoutput>

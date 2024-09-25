@@ -18,6 +18,7 @@
         <cfset url.q = leksemaModel.sacuvaj()>
     </cfif>
 
+    <!-----Dodavanje ili izmena morfoloških detalja glagola---->
     <cfif form.action eq "mng_morf_glagoli">
         <cfset morfGlagoliModel.sacuvaj()>
     </cfif>
@@ -33,8 +34,14 @@
     <cfelse>
         <cfset leksema = leksemaModel.dohvatiLeksemu()> 
 
+        <!----Kad je url.q jednako 0, znači da unosimo nov podatak----->
+        <cfif url.q eq 0>
+            <cfset naslov = "Новa лексема">
+        <cfelse>
+            <cfset naslov = ucFirst(leksema.leksema)>
+        </cfif>
         <!------Naslov------>
-        <cfmodule template="#application.view#\h1.cfm" naslov = "#ucFirst(leksema.leksema)#">
+        <cfmodule template="#application.view#\h1.cfm" naslov = "#naslov#">
         
         <!------Templejtu za prikaz lekseme prosleđujemo objekat leksema i spisak akcenata i vrsta reči------>
         <cfmodule template="#application.view#\leksema.cfm" 
@@ -51,6 +58,11 @@
                 morfGlagoli ="#morfGlagoliModel.dohvatiMorfoloskeDetalje()#">
             </cfcase>
         </cfswitch>
+
+        <div class="container mt-2">
+            <button class="btn btn-secondary btn-sm" type="button" onclick="location.href='#request.scriptName#'">Назад</button>
+        </div>
+       
     </cfif>
 
 </cfoutput>

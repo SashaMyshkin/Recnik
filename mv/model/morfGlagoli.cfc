@@ -34,7 +34,7 @@ component {
 
     public number function sacuvaj() {
         
-        if(form.morf_gl_id == 0){
+        if(form.morf_gl_id == ""){
             save_morf_gl = queryExecute(
                 sql = "INSERT INTO morf_gl
                         (
