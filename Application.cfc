@@ -1,5 +1,5 @@
 <cfcomponent>
-    <cfset this.name = "recnik">
+    <cfset this.name = "rc">
     <cfset this.locale = "sr_RS">
     <cfset this.timezone = "Europe/Belgrade">
     <cfset this.applicationTimeout = createTimeSpan(0, 0, 30, 0)>

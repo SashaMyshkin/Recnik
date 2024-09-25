@@ -1,9 +1,9 @@
-<cfset leksemaModel = new Recnik.mv.model.leksema()>
-<cfset vrsteReciModel = new Recnik.mv.model.vrsteReci()>
-<cfset akcentiModel = new Recnik.mv.model.akcenti()>
-<cfset vidoviModel = new Recnik.mv.model.glagolskiVidovi()>
-<cfset vrsteModel = new Recnik.mv.model.glagolskeVrste()>
-<cfset morfGlagoliModel = new Recnik.mv.model.morfGlagoli()>
+<cfset leksemaModel = new rc.mv.model.leksema()>
+<cfset vrsteReciModel = new rc.mv.model.vrsteReci()>
+<cfset akcentiModel = new rc.mv.model.akcenti()>
+<cfset vidoviModel = new rc.mv.model.glagolskiVidovi()>
+<cfset vrsteModel = new rc.mv.model.glagolskeVrste()>
+<cfset morfGlagoliModel = new rc.mv.model.morfGlagoli()>
 
 <cfparam name="url.q" default="">
 <cfparam name="form.leksema" default="">

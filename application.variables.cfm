@@ -1,9 +1,9 @@
 <cfif cgi.request_url.listContainsNoCase('https') eq '0'>
-    <cfset application["rootURL"] = "http://localhost:8888/Recnik/">
-    <cfset application["root"] = "\Recnik">
+    <cfset application["rootURL"] = "http://localhost:8888/rc/">
+    <cfset application["root"] = "\rc">
 <cfelse>
-    <cfset application["rootURL"] = "https://teatar011.com/Recnik/">
-    <cfset application["root"] = "\Recnik">
+    <cfset application["rootURL"] = "https://teatar011.com/rc/">
+    <cfset application["root"] = "\rc">
 </cfif>
 
 <cfset application.langs = ["sr-Cyrl"]>
