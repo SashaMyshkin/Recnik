@@ -102,7 +102,7 @@
         <body>
             <div class="login-container">
                 <img src="#application.rootURL#/logo.jpeg" style="width:55px;"> 
-                <h2>#txtAdministration#</h2>
+                <h2>Администрација</h2>
 
                 <cfif attributes.text neq ""><h3 style="color:red">#attributes.text#</h3></cfif>
                 <form class="login-form" action="#application.rootURL#" method="POST">
