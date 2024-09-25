@@ -4,6 +4,7 @@
 <cfset vidoviModel = new rc.mv.model.glagolskiVidovi()>
 <cfset vrsteModel = new rc.mv.model.glagolskeVrste()>
 <cfset morfGlagoliModel = new rc.mv.model.morfGlagoli()>
+<cfset leksGlagoliModel = new rc.mv.model.leksGlagoli()>
 
 <cfparam name="url.q" default="">
 <cfparam name="form.leksema" default="">
@@ -56,6 +57,8 @@
                 vidovi = "#vidoviModel.dohvatiGlagolskeVidove()#"
                 vrste ="#vrsteModel.dohvatiGlagolskeVrste()#"
                 morfGlagoli ="#morfGlagoliModel.dohvatiMorfoloskeDetalje()#">
+
+                <cfmodule template="#application.view#\leksGlagoli.cfm" znacenja="#leksGlagoliModel.dohvatiGlagolskaZnacenja()#">
             </cfcase>
         </cfswitch>
 
