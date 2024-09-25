@@ -87,7 +87,7 @@ component {
 
 
 
-    public number function save() {
+    public number function sacuvaj() {
         
         if(form.leksema_id == 0){
             save_leks_leksema = queryExecute(

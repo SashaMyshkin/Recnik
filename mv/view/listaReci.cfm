@@ -1,7 +1,7 @@
 <style><cfinclude template="listaReci.css"></style>
 <cfoutput>
     <div class="container">
-        <form method="POST" name="searchForm" id="searchForm" action="?q=">
+        <form method="POST" name="searchForm" id="searchForm" action="?q=" class="mt-3">
     
             <div class="row justify-content-between">
                 <div class="col-md-2">
@@ -13,7 +13,7 @@
             </div>
         </form>
     
-        <table class="table table-sm table-dark table-striped table-hover caption-top">
+        <table class="table table-sm table-dark table-striped table-hover caption-top mt-3">
             <!------caption class="text-light">Ukupno: <caption-------->
             <thead>
                 <tr class="text-center">

@@ -10,11 +10,18 @@
 
 <cfoutput>
 
+    <cfif form.action eq "mngleks">
+        <cfset url.q = leksemaModel.sacuvaj()>
+    </cfif>
+
     <cfif url.q eq "">
+        <cfmodule template="#application.view#\h1.cfm" naslov = "Претрага">
         <cfmodule template="#application.view#\listaReci.cfm" lekseme = "#leksemaModel.dohvatiLekseme()#">
     <cfelse>
+        <cfset leksema = leksemaModel.dohvatiLeksemu()> 
+        <cfmodule template="#application.view#\h1.cfm" naslov = "#ucFirst(leksema.leksema)#">
         <cfmodule template="#application.view#\leksema.cfm" 
-        leksema = "#leksemaModel.dohvatiLeksemu()#" 
+        leksema = "#leksema#" 
         vrsteReci = "#vrsteReciModel.dohvatiVrsteReci()#"
         akcenti = "#AkcentiModel.dohvatiAkcente()#">
     </cfif>
